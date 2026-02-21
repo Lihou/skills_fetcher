@@ -1,0 +1,15 @@
+{
+  "name": "skills-feed-lite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "bun run src/crawl.ts",
+    "categorize": "bun run src/categorize.ts",
+    "sync": "bun run src/crawl.ts && bun run src/categorize.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.7.0"
+  }
+}
