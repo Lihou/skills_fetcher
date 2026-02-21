@@ -14,7 +14,7 @@ permissions:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +30,13 @@ jobs:
 
       - name: Build category index
         run: bun run categorize
+
+      - name: Fetch SKILL.md descriptions (top 2000)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FETCH_TOP_N: "2000"
+          FETCH_CONCURRENCY: "8"
+        run: bun run descriptions
 
       - name: Commit and push
         run: |

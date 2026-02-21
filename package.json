@@ -6,7 +6,8 @@
   "scripts": {
     "crawl": "bun run src/crawl.ts",
     "categorize": "bun run src/categorize.ts",
-    "sync": "bun run src/crawl.ts && bun run src/categorize.ts"
+    "descriptions": "bun run src/fetch-descriptions.ts",
+    "sync": "bun run src/crawl.ts && bun run src/categorize.ts && bun run src/fetch-descriptions.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.2.0",
