@@ -1,5 +1,5 @@
 {
-  "name": "skills-feed-lite",
+  "name": "skills_fetcher",
   "version": "1.0.0",
   "private": true,
   "type": "module",
